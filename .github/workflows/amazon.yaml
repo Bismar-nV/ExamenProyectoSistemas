@@ -22,7 +22,7 @@ jobs:
           cd /var/www/html
           sudo rm -rf *
           if [ -d ".git" ]; then
-            # si es un repositorio git, hacer pull
+            # si es un repositorio git, hacer pull bismar
             git pull origin main
           else
             # si no existe, clonar el repositorio
