@@ -18,7 +18,7 @@ jobs:
 
       - name: Despliegue en Lightsail
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@98.81.207.73 << 'EOF'
+          ssh -o StrictHostKeyChecking=no ubuntu@18.232.130.153 << 'EOF'
           cd /var/www/html
           sudo rm -rf *
           if [ -d ".git" ]; then
@@ -26,6 +26,6 @@ jobs:
             git pull origin main
           else
             # si no existe, clonar el repositorio
-            git clone https://github.com/Bismar-nV/Caculator.git .
+            git clone https://github.com/Bismar-nV/ExamenProyectoSistemas.git .
           fi            
           EOF
