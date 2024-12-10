@@ -22,14 +22,14 @@ jobs:
       # Paso 3: Construir la imagen Docker
       - name: Build Docker Image
         run: |
-          docker build -t pagina-dino .
+          docker build -t examenproyectosistemas .
 
       # Paso 4: Etiquetar la imagen con el nombre de usuario de Docker Hub y un tag
       - name: Tag Docker Image
         run: |
-          docker tag pagina-dino ${{ secrets.DOCKERHUB_USERNAME }}/pagina-dino:latest
+          docker tag examenproyectosistemas ${{ secrets.DOCKERHUB_USERNAME }}/examenproyectosistemas:latest
 
       # Paso 5: Publicar la imagen en Docker Hub
       - name: Push Docker Image to DockerHub
         run: |
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/pagina-dino:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/examenproyectosistemas:latest
